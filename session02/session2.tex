@@ -1,0 +1,108 @@
+\documentclass[10pt,a4paper,notitlepage]{article}
+\setlength{\parskip}{3mm}
+\setlength{\parindent}{0mm}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{anyfontsize}
+
+%Theorem environment for problem
+\theoremstyle{definition}
+\newtheorem{prob}{Problem}
+
+%Symbol for \divides
+\newcommand{\divides}{\ensuremath{\nobreak \, \vert\, \nobreak}}
+
+\makeatletter
+    %Harmonise parskip and theorem environments
+    \def\thm@space@setup
+    {
+        \thm@preskip=\parskip
+        \thm@postskip=0pt
+    }
+
+    %Different title style for Samasya
+    \def\@maketitle{%
+        \newpage
+        \null
+        \vskip 2em%
+        \begin{center}%
+            \let \footnote \thanks
+            {\LARGE \@title \par}%
+            \vskip 1.5em%
+    %        {\large
+    %            \lineskip .5em%
+    %            \begin{tabular}[t]{c}%
+    %                \@author
+    %            \end{tabular}\par}
+    %        \vskip 1em%
+            {\large \@date}%
+        \end{center}
+    %    \par
+    %    \vskip 1.5em}
+    }
+\makeatother
+
+\title{\textrm{\textbf{\fontsize{30}{40}\selectfont Samasya}}}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+
+Samasya is a mathematics discussion and problem solving club.
+We discuss a variety of mathematical topics and solve problems as well.
+We encourage participants to have a look at these problems%\footnote{The problems are not necessarily in the order of difficulty}
+before the meeting.
+Discussion, however, will not be limited to these problems.
+Participants can bring their own problems or mathematical ideas they wish to discuss.\\
+\hrule
+
+\textbf{Date:} Friday, 14\textsuperscript{th} August\\
+\textbf{Time:} $9$ p.m.\\
+\textbf{Venue:} OPB LAN Room\\
+\hrule
+
+\begin{prob}
+    Consider an equivalence relation on the set $(0, +\infty)$: $x \sim y$ if $\frac{x}{y} \in \mathbb{Q}$. The relation creates equivalence classes on the set. Show that the cardinality of the set of the equivalence classes is the cardinality of $\mathbb{R}$. Also, show that any such equivalence class intersects every open interval in $(0, +\infty)$.
+\end{prob}
+
+\begin{prob}
+    Consider a square of side length $n$, and take any $(n+1)^2$ points inside it. Show that three of these points form a triangle whose area is less than or equal to $\frac{1}{2}$.
+\end{prob}
+
+\begin{prob}
+    For a given prime number $q$, find all polynomials $P(x)$ with integer coefficients such that \mbox{$P(x) \divides x^q - 1$} for infinitely many $q \in \mathbb{Z}$.
+\end{prob}
+
+\begin{prob}
+    Show that the cardinality of the set of continuous functions on $\mathbb{R}$ is $\aleph_1$, i.e. the cardinality of the real numbers.
+\end{prob}
+
+\begin{prob}
+    Consider a function $f: [0,1] \to \mathbb{R}$ such that $f(3x)=2f(x)$ and $f(x)+f(1-x)=1$ for all $x \in [0,1]$. Does such a function actually exist? If it does, is it unique? What if we impose monotonicity? What if we impose continuity?
+\end{prob}
+
+\begin{prob}
+    Consider the ring of real continuous functions on $[0,1]$. Show that every maximal ideal of the ring is of the form
+    $$I_{\alpha} = \{f\ | f(\alpha) = 0\}$$
+    for a given $\alpha \in [0,1]$. In other words, show that that there exists an injective map between the set of maximal ideals of the ring and the set of points in $[0,1]$. Is this still true if we take the space $(0,1)$ instead?
+\end{prob}
+
+\begin{prob}
+    A cover of a topological space $X$ is a collection of subsets $\{C_i\}$ of $X$ such that $\bigcup C_i = X$. Each $C_i$ inherits the subspace topology from $X$. A cover $C_i$ is fundamental if: a subset $U$ of $X$ is open in $X$ is equivalent to saying that $U \cap C_i$ is open in $C_i$ for all $C_i$. A cover is locally finite if every point in $X$ has a neighbourhood that is contained in finitely many $C_i$. Prove the following:
+    \begin{itemize}
+        \item Every open cover is fundamental.
+        \item A finite closed cover is fundamental.
+        \item Every locally finite closed cover is fundamental.
+        \item If $f$ is a function on $X$, and the restriction of $f$ on $C_i$ for all $i$ is continuous, then $f$ is continuous.
+    \end{itemize}
+\end{prob}
+
+
+\end{document}

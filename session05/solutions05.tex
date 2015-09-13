@@ -1,0 +1,98 @@
+\documentclass[10pt,a4paper,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{anyfontsize}
+\usepackage{parskip}
+
+%Theorem environment for problem
+\theoremstyle{definition}
+\newtheorem{sol}{Solution}
+
+%Symbol for \divides
+\newcommand{\divides}{\ensuremath{\nobreak \, \vert\, \nobreak}}
+
+\makeatletter
+%Harmonise parskip and theorem environments
+\def\thm@space@setup
+{
+    \thm@preskip=\parskip
+    \thm@postskip=0pt
+}
+
+%Different title style for Samasya
+\def\@maketitle{%
+    \newpage
+    \null
+    \vskip 2em%
+    \begin{center}%
+        \let \footnote \thanks
+        {\LARGE \@title \par}%
+        \vskip 1.5em%
+        %        {\large
+        %            \lineskip .5em%
+        %            \begin{tabular}[t]{c}%
+        %                \@author
+        %            \end{tabular}\par}
+        %        \vskip 1em%
+        {\large \@date}%
+    \end{center}
+    %    \par
+    %    \vskip 1.5em}
+}
+\makeatother
+
+\title{\textrm{\textbf{\fontsize{30}{40}\selectfont Samasya Solutions}}}
+\date{%You can put a date here. \today works fine as well.
+    }
+
+\begin{document}
+
+\maketitle
+
+These are sketches of solutions to the problems discussed at Samasya on the date mentioned below. Some problems are without a solution; that probably means we were unable to solve them. If you think you have a solution for one of those unsolved problems, feel free to contact the site maintainer. 
+\\
+\hrule
+
+\textbf{Date: 4\textsuperscript{th} September, 2015}%Date for the meeting
+\\
+\hrule
+
+%Insert problems in the environment prob.
+%\begin{prob}
+%insert problem statement here
+%\end{prob}
+
+\begin{sol}[Closed]
+Countability argument: algebraic numbers are countable, real numbers are not, ergo, there exist uncountably many transcendental numbers.
+\end{sol}
+
+\begin{sol}[Semi-open]
+Showing the function is an isomorphism is standard symbol chasing. For $\mathbb{Q}^+$, construct the isomorphism by mapping the $(2k+1)$\textsuperscript{th} prime to the reciprocal of the $2k$\textsuperscript{th} prime and map the $2k$\textsuperscript{th} prime to the $(2k+1)$\textsuperscript{th} prime.
+
+For $\mathbb{C}^\times$, one would try $f(x)= x^i$, but that does not work out. However, no proof was found for the fact that no such function exists.
+\end{sol}
+
+\begin{sol}[Open]
+This problem was not discussed.
+\end{sol}
+
+\begin{sol}[Closed]
+It's sufficient to prove for an irrational $a$. Consider the sequence $\{na\}$, where $n \in \mathbb{N}$ and $\{\cdot\}$ is the greatest integer function. One needs to show that this sequence is dense in $(0,1)$. That is shown using the pigeon hole principle. The statement of the problems follows through after this.
+\end{sol}
+
+\begin{sol}[Closed]
+The problem essentially asks for integer solutions in $y$ and $z$ for the following inequality:
+$$ x \cdot 10^y \leq 2^z < (x+1) \cdot 10^y$$
+Taking $\log_2$ throughout, one gets an inequation of the form $n-ma < \epsilon$, which has an integer solution, by problem 4.
+\end{sol}
+
+\begin{sol}[Closed]
+(To fill in the details) Riemann-Zeta
+\end{sol}
+
+\end{document}

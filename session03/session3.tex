@@ -1,0 +1,92 @@
+\documentclass[10pt,a4paper,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{anyfontsize}
+\usepackage{parskip}
+
+%Theorem environment for problem
+\theoremstyle{definition}
+\newtheorem{prob}{Problem}
+
+%Symbol for \divides
+\newcommand{\divides}{\ensuremath{\nobreak \, \vert\, \nobreak}}
+
+\makeatletter
+%Harmonise parskip and theorem environments
+\def\thm@space@setup
+{
+    \thm@preskip=\parskip
+    \thm@postskip=0pt
+}
+
+%Different title style for Samasya
+\def\@maketitle{%
+    \newpage
+    \null
+    \vskip 2em%
+    \begin{center}%
+        \let \footnote \thanks
+        {\LARGE \@title \par}%
+        \vskip 1.5em%
+        %        {\large
+        %            \lineskip .5em%
+        %            \begin{tabular}[t]{c}%
+        %                \@author
+        %            \end{tabular}\par}
+        %        \vskip 1em%
+        {\large \@date}%
+    \end{center}
+    %    \par
+    %    \vskip 1.5em}
+}
+\makeatother
+
+\title{\textrm{\textbf{\fontsize{30}{40}\selectfont Samasya}}}
+\date{%You can put a date here. \today works fine as well.
+    }
+
+\begin{document}
+
+\maketitle
+
+Samasya is a mathematics discussion and problem solving club.
+We discuss a variety of mathematical topics and solve problems as well.
+We encourage participants to have a look at these problems%\footnote{The problems are not necessarily in the order of difficulty}
+before the meeting.
+Discussion, however, will not be limited to these problems.
+Participants can bring their own problems or mathematical ideas they wish to discuss.\\
+\hrule
+
+\textbf{Date: 21\textsuperscript{st} August, 2015}%Date for the meeting
+\\
+\textbf{Time: 9:00 p.m.}%Time for the meeting
+\\
+\textbf{Venue: O.P.B. WiFi Room}%Venue for the meeting
+\\
+\hrule
+
+%Insert problems in the environment prob.
+%\begin{prob}
+%insert problem statement here
+%\end{prob}
+
+\begin{prob}
+Define a subset $A$ of $\mathbb{N}$ to be \emph{measurable} if the sequence $\{a_n\}$ converges, where $a_n = \frac{\#(A \cap \{1,2,\ldots,n\})}{n}$. Show that the intersection of two measurable subsets need not be measurable.
+\end{prob}
+
+\begin{prob}
+Consider the sequence $\{s_n\}$, where,
+$$s_k = \sum_{i=0}^{k}\frac{1}{i!}$$
+Show that this sequence converges, and it converges to an irrational number.
+\end{prob}
+
+\begin{prob}
+Prove that every positive real number $b$ has a square root by showing that the sequence $\{a_n\}$ with $a_{1} = 1$ and $a_{k+1} = \frac{a_k + \frac{b}{a_k}}{2}$ converges to a number $x$ such that $x^2=b$.
+\end{prob}
+
+\end{document}

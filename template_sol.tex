@@ -1,0 +1,69 @@
+\documentclass[10pt,a4paper,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{anyfontsize}
+\usepackage{parskip}
+
+%Theorem environment for problem
+\theoremstyle{definition}
+\newtheorem{sol}{Solution}
+
+%Symbol for \divides
+\newcommand{\divides}{\ensuremath{\nobreak \, \vert\, \nobreak}}
+
+\makeatletter
+%Harmonise parskip and theorem environments
+\def\thm@space@setup
+{
+    \thm@preskip=\parskip
+    \thm@postskip=0pt
+}
+
+%Different title style for Samasya
+\def\@maketitle{%
+    \newpage
+    \null
+    \vskip 2em%
+    \begin{center}%
+        \let \footnote \thanks
+        {\LARGE \@title \par}%
+        \vskip 1.5em%
+        %        {\large
+        %            \lineskip .5em%
+        %            \begin{tabular}[t]{c}%
+        %                \@author
+        %            \end{tabular}\par}
+        %        \vskip 1em%
+        {\large \@date}%
+    \end{center}
+    %    \par
+    %    \vskip 1.5em}
+}
+\makeatother
+
+\title{\textrm{\textbf{\fontsize{30}{40}\selectfont Samasya Solutions}}}
+\date{%You can put a date here. \today works fine as well.
+    }
+
+\begin{document}
+
+\maketitle
+
+\\
+\hrule
+
+\textbf{Date:}%Date for the meeting
+\\
+\hrule
+
+%Insert problems in the environment prob.
+%\begin{prob}
+%insert problem statement here
+%\end{prob}
+
+\end{document}
