@@ -8,6 +8,7 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{anyfontsize}
 \usepackage{parskip}
+\usepackage{hyperref}
 
 %Theorem environment for problem
 \theoremstyle{definition}
@@ -50,6 +51,16 @@
 \date{%You can put a date here. \today works fine as well.
     }
 
+% Footnote without marker
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+
 \begin{document}
 
 \maketitle
@@ -74,5 +85,5 @@ Participants can bring their own problems or mathematical ideas they wish to dis
 %\begin{prob}
 %insert problem statement here
 %\end{prob}
-
+\blfootnote{The past problems and solutions are available at \href{http://samasya.github.io}{samasya.github.io}.}
 \end{document}
