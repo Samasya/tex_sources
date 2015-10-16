@@ -1,0 +1,102 @@
+\documentclass[10pt,a4paper,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{anyfontsize}
+\usepackage{parskip}
+\usepackage{hyperref}
+
+%Theorem environment for problem
+\theoremstyle{definition}
+\newtheorem{prob}{Problem}
+
+%Symbol for \divides
+\newcommand{\divides}{\ensuremath{\nobreak \, \vert\, \nobreak}}
+
+\makeatletter
+%Harmonise parskip and theorem environments
+\def\thm@space@setup
+{
+    \thm@preskip=\parskip
+    \thm@postskip=0pt
+}
+
+%Different title style for Samasya
+\def\@maketitle{%
+    \newpage
+    \null
+    \vskip 2em%
+    \begin{center}%
+        \let \footnote \thanks
+        {\LARGE \@title \par}%
+        \vskip 1.5em%
+        %        {\large
+        %            \lineskip .5em%
+        %            \begin{tabular}[t]{c}%
+        %                \@author
+        %            \end{tabular}\par}
+        %        \vskip 1em%
+        {\large \@date}%
+    \end{center}
+    %    \par
+    %    \vskip 1.5em}
+}
+\makeatother
+
+\title{\textrm{\textbf{\fontsize{30}{40}\selectfont Samasya}}}
+\date{%You can put a date here. \today works fine as well.
+    }
+
+% Footnote without marker
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+
+\begin{document}
+
+\maketitle
+
+Samasya is a mathematics discussion and problem solving club.
+We discuss a variety of mathematical topics and solve problems as well.
+We encourage participants to have a look at these problems%\footnote{The problems are not necessarily in the order of difficulty}
+before the meeting.
+Discussion, however, will not be limited to these problems.
+Participants can bring their own problems or mathematical ideas they wish to discuss.\\
+\hrule
+
+\textbf{Date: 2\textsuperscript{nd} October, 2015}%Date for the meeting
+\\
+\textbf{Time: 9:00 p.m.}%Time for the meeting
+\\
+\textbf{Venue: OPB LAN Room}%Venue for the meeting
+\\
+\hrule
+
+%Insert problems in the environment prob.
+%\begin{prob}
+%insert problem statement here
+%\end{prob}
+
+\begin{prob}
+Let $sd$ be a function from $\mathbb{N}$ to $\mathbb{N}$ such that $sd(x)$ is the sum of digits of $x$ when written in base $10$. What is the value of $sd(sd(sd(4444^{4444})))$?
+\end{prob}
+
+\begin{prob}
+Let $\{a_n\}$ and $\{b_n\}$ be two sequences of real numbers. Also, suppose that $\{a_n\}$ is a subsequence of $\{b_n\}$ and $\{b_n\}$ is a subsequence of $\{a_n\}$. Do there exists such sequences if $\{a_n\} \neq \{b_n\}$? What if $\{a_n\}$ does not converge? But if $\{a_n\}$ does converge, and there exists a sequence $\{b_n\}$ with the mentioned property of being a subsequence of $\{a_n\}$ and vice versa, is it true that the two sequences must be the same? 
+\end{prob}
+
+\begin{prob}
+A function $f$ from $\mathbb{R}$ to $\mathbb{R}$ is said to have the intermediate value property if for all $a$, $b \in \mathbb{R}$ such that $a<b$, and for all $c$ between $f(a)$ and $f(b)$, there exists an $x \in (a,b)$ such that $f(x)=c$. It turns out that even if a function has the intermediate value property, it need not be continuous. To show such a function is continuous, one must put additional constraints on it. It turns out that if the set $S_r = \{x\ :\ f(x)=r\}$ is closed for all rational numbers $r$, then the function $f$ does turn out to be continuous. Prove it.
+\end{prob}
+
+\blfootnote{The past problems and solutions are available at \href{http://samasya.github.io}{samasya.github.io}.}
+\end{document}

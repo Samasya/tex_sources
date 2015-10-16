@@ -1,0 +1,79 @@
+\documentclass[10pt,a4paper,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{anyfontsize}
+\usepackage{parskip}
+\usepackage{hyperref}
+
+%Theorem environment for problem
+\theoremstyle{definition}
+\newtheorem{prob}{Problem}
+
+%Symbol for \divides
+\newcommand{\divides}{\ensuremath{\nobreak \, \vert\, \nobreak}}
+
+\makeatletter
+%Harmonise parskip and theorem environments
+\def\thm@space@setup
+{
+    \thm@preskip=\parskip
+    \thm@postskip=0pt
+}
+
+%Different title style for Samasya
+\def\@maketitle{%
+    \newpage
+    \null
+    \vskip 2em%
+    \begin{center}%
+        \let \footnote \thanks
+        {\LARGE \@title \par}%
+        \vskip 1.5em%
+        %        {\large
+        %            \lineskip .5em%
+        %            \begin{tabular}[t]{c}%
+        %                \@author
+        %            \end{tabular}\par}
+        %        \vskip 1em%
+        {\large \@date}%
+    \end{center}
+    %    \par
+    %    \vskip 1.5em}
+}
+\makeatother
+
+\title{\textrm{\textbf{\fontsize{30}{40}\selectfont Samasya Shortlist}}}
+\date{%You can put a date here. \today works fine as well.
+    }
+
+% Footnote without marker
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{prob}
+  A set $S$ is called \emph{infinite} if there exists a bijection $f$ from $S$
+  to $T$, where $T$ is a strict subset of $S$. Show that an infinite set always
+  has a countable subset, thereby showing that $\aleph_0$ is the smallest
+  infinity, so to speak.
+\end{prob}
+
+%Insert problems in the environment prob.
+%\begin{prob}
+%insert problem statement here
+%\end{prob}
+\end{document}
